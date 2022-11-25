@@ -16,6 +16,7 @@
   font-size: 40px;
   color: inherit;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .header_logo:hover {
@@ -40,8 +41,13 @@
   font-size: 20px;
   color: #000000;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .menu_link:hover {
   color: #ff4901;
+}
+
+.content {
+  padding: 20px;
 }

@@ -38,19 +38,19 @@ const MainLayout = (props) => {
                                 <a
                                     className='menu_link'
                                     onClick={() => {
-                                        navigate('/caps')
+                                        navigate('/support')
                                     }}
                                 >
-                                    Baseball caps
-                                </a>
-                            </li>
-                            <li className='menu_item'>
-                                <a href='#' className='menu_link'>
                                     Feedback
                                 </a>
                             </li>
                             <li className='menu_item'>
-                                <a href='#' className='menu_link'>
+                                <a
+                                    className='menu_link'
+                                    onClick={() => {
+                                        navigate('/cart')
+                                    }}
+                                >
                                     Cart
                                 </a>
                             </li>
@@ -58,7 +58,7 @@ const MainLayout = (props) => {
                     </nav>
                 </div>
             </header>
-            <div>{props.children}</div>
+            <div className='content'>{props.children}</div>
         </div>
     )
 }
