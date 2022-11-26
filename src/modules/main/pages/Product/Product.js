@@ -20,6 +20,10 @@ const Product = () => {
         })
     }, [params])
 
+    const addToCart = () => {
+        console.log(productInfo.id)
+    }
+
     return (
         <MainLayout>
             <div className={s.root}>
@@ -36,6 +40,7 @@ const Product = () => {
                 ) : (
                     'No Product'
                 )}
+                <button onClick={addToCart}>Add to cart</button>
             </div>
         </MainLayout>
     )
