@@ -8,7 +8,7 @@ import s from './Product.module.scss'
 
 const Product = () => {
     const [isLoading, setIsLoading] = useState(false)
-    const [productInfo, setProductInfo] = useState(null)
+    const [productInfo, setProductInfo] = useState([])
     const params = useParams()
     const navigate = useNavigate()
 
@@ -33,7 +33,7 @@ const Product = () => {
                 ) : productInfo ? (
                     <>
                         <h2 className={s.title}>{productInfo.title}</h2>
-                        <img className={s.image} src={productInfo.image} />
+                        <img className={s.image} src={productInfo.image} alt='' />
                         <h1 className={s.price}>{productInfo.price}$</h1>
                         <div className={s.description}>{productInfo.description}</div>
                     </>

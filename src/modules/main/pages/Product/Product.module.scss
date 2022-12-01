@@ -1,9 +1,56 @@
 .root {
+  width: calc(1000 / 1440 * 100vw);
+  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  padding: calc(30 / 1440 * 100vw);
+  font-weight: 700;
 
+  button {
+    width: calc(180 / 1440 * 100vw);
+    height: calc(50 / 1440 * 100vw);
+    background-color: #1a226b;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    font-size: calc(24 / 1440 * 100vw);
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 700;
+    line-height: calc(16 / 1440 * 100vw);
+    color: #ffffff;
+    transition: 0.3s;
+    position: relative;
+    right: 0;
+  }
+
+  button:hover {
+    background-color: #6670ca;
+    color: #ffffff;
+  }
 }
 .image{
-  width: 300px;
+  width: calc(300 / 1440 * 100vw);
 }
-.title{}
-.price{}
-.description{}
+.title{
+  font-size: calc(24 / 1440 * 100vw);
+}
+.price{
+  font-size: calc(24 / 1440 * 100vw);
+}
+.description{
+  font-size: calc(24 / 1440 * 100vw);
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    width: calc(600 / 768 * 100vw);
+    padding: calc(26 / 768 * 100vw);
+
+    button {
+      width: calc(180 / 768 * 100vw);
+      height: calc(50 / 768 * 100vw);
+      font-size: calc(24 / 768 * 100vw);
+      line-height: calc(16 / 768 * 100vw);
+    }
+  }
+
+}

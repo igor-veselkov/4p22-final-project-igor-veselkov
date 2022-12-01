@@ -1,6 +1,5 @@
 import React from 'react'
 import s from './CartItem.module.scss'
-import product from '../../../Product/Product'
 
 const CartItem = (props) => {
     const { id, title, image, price, cartProducts, setCartProducts } = props
@@ -11,9 +10,9 @@ const CartItem = (props) => {
 
     return (
         <div className={s.root}>
-            <img src={image} />
+            <img src={image} alt='' />
             <div className={s.title}>{title}</div>
-            <div>{price}$</div>
+            <div className={s.price}>{price}$</div>
             <button onClick={onDeleteCartItem}>Delete</button>
         </div>
     )

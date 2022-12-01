@@ -7,8 +7,8 @@ const ProductItem = (props) => {
     const navigate = useNavigate()
 
     return (
-        <div className={s.root} onClick={() => navigate(`/${id}`)}>
-            <img className={s.image} src={image} />
+        <div className={s.root} onClick={() => navigate(`/products/${id}`)}>
+            <img className={s.image} src={image} alt='' />
             <div className={s.title}>{title}</div>
             <div className={s.price}>{price}$</div>
         </div>

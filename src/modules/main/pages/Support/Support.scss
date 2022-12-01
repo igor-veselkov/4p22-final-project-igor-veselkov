@@ -1,0 +1,363 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.registration-card {
+  width: calc(700 / 1440 * 100vw);
+  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  padding: calc(30 / 1440 * 100vw);
+  font-weight: 700;
+}
+
+.registration-card__form-registration {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-card__label-email {
+  margin-left: calc(-10 / 1440 * 100vw);
+  margin-bottom: calc(5 / 1440 * 100vw);
+  font-size: calc(16 / 1440 * 100vw);
+
+}
+
+.registration-card__input-email {
+  height: calc(49 / 1440 * 100vw);
+  outline: none;
+  border: 2px solid #000000;
+  padding-left: calc(15 / 1440 * 100vw);
+  font-size: calc(28 / 1440 * 100vw);
+  font-weight: 700;
+  margin-bottom: calc(11 / 1440 * 100vw);
+}
+
+.registration-card__input-email::placeholder {
+  color: #cccccc;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.registration-card__email-error {
+  font-size: calc(16 / 1440 * 100vw);
+  color: #ee2424;
+}
+
+.registration-card__label-name {
+  margin-left: calc(-10 / 1440 * 100vw);
+  margin-bottom: calc(5 / 1440 * 100vw);
+  font-size: calc(16 / 1440 * 100vw);
+}
+
+.registration-card__input-name {
+  height: calc(49 / 1440 * 100vw);
+  outline: none;
+  border: 2px solid #000000;
+  padding-left: calc(15 / 1440 * 100vw);
+  font-size: calc(28 / 1440 * 100vw);
+  color: inherit;
+  font-weight: 700;
+  margin-bottom: calc(11 / 1440 * 100vw);
+}
+
+.registration-card__input-name::placeholder {
+  color: #cccccc;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.registration-card__name-error {
+  font-size: calc(16 / 1440 * 100vw);
+  color: #ee2424;
+}
+
+.registration-card__radio {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio__span {
+  margin-bottom: calc(5 / 1440 * 100vw);
+  font-size: calc(20 / 1440 * 100vw);
+  color: #000000;
+}
+
+.radio__man {
+  margin-bottom: calc(10 / 1440 * 100vw);
+  font-size: calc(20 / 1440 * 100vw);
+  font-weight: 400;
+  color: #000000;
+}
+
+.radio__input-man {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.radio__input-man+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.radio__input-man+label::before {
+  content: "";
+  display: inline-block;
+  width: calc(25 / 1440 * 100vw);
+  height: calc(25 / 1440 * 100vw);
+  border: 2px solid #000000;
+  background-clip: content-box;
+  border-radius: 50%;
+  padding: calc(3 / 1440 * 100vw);
+  margin-right: calc(9 / 1440 * 100vw);
+}
+
+.radio__input-man:checked+label::before {
+  background-color: #000000;
+}
+
+.radio__woman {
+  margin-bottom: calc(9 / 1440 * 100vw);
+  font-size: calc(20 / 1440 * 100vw);
+  font-weight: 400;
+  color: #000000;
+}
+
+.radio__input-woman {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.radio__input-woman+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.radio__input-woman+label::before {
+  content: "";
+  display: inline-block;
+  width: calc(25 / 1440 * 100vw);
+  height: calc(25 / 1440 * 100vw);
+  border: 2px solid #000000;
+  background-clip: content-box;
+  border-radius: 50%;
+  padding: calc(3 / 1440 * 100vw);
+  margin-right: calc(10 / 1440 * 100vw);
+}
+
+.radio__input-woman:checked+label::before {
+  background-color: #000000;
+}
+
+.radio__label-woman {
+  color: #000000;
+}
+
+.registration-card__textarea-comment {
+  margin-bottom: calc(24 / 1440 * 100vw);
+}
+
+.textarea-comment__span {
+  display: block;
+  font-size: calc(16 / 1440 * 100vw);
+  font-weight: 700;
+  color: inherit;
+  margin-bottom: calc(5 / 1440 * 100vw);
+}
+
+.textarea-comment__textarea {
+  outline: none;
+  width: calc(640 / 1440 * 100vw);
+  height: calc(200 / 1440 * 100vw);
+  border: 2px solid #000000;
+  resize: none;
+  padding-left: calc(15 / 1440 * 100vw);
+  padding-top: calc(7 / 1440 * 100vw);
+  padding-right: calc(2 / 1440 * 100vw);
+  font-size: calc(28 / 1440 * 100vw);
+  line-height: calc(36 / 1440 * 100vw);
+  font-weight: 700;
+}
+
+.textarea-comment__textarea::placeholder {
+  color: #cccccc;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.registration-card__checkbox {
+  margin-bottom: calc(56 / 1440 * 100vw);
+}
+
+.checkbox__input-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox__input-checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.checkbox__input-checkbox+label::before {
+  content: "";
+  display: inline-block;
+  width: calc(20 / 1440 * 100vw);
+  height: calc(20 / 1440 * 100vw);
+  border: 2px solid #000000;
+  background-clip: content-box;
+  padding: calc(3 / 1440 * 100vw);
+  margin-right: calc(10 / 1440 * 100vw);
+}
+
+.checkbox__input-checkbox:checked+label::before {
+  background-color: #000000;
+}
+
+.checkbox__label-checkbox {
+  font-size: calc(20 / 1440 * 100vw);
+  font-weight: 400;
+  color: #000000;
+}
+
+.registration-card__button {
+  width: calc(180 / 1440 * 100vw);
+  height: calc(50 / 1440 * 100vw);
+  background-color: #1a226b;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  font-size: calc(24 / 1440 * 100vw);
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 700;
+  line-height: calc(16 / 1440 * 100vw);
+  color: #ffffff;
+  transition: 0.3s;
+  position: relative;
+  right: 0;
+}
+
+.registration-card__button:hover {
+  background-color: #6670ca;
+  color: #ffffff;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .registration-card {
+    width: calc(600 / 768 * 100vw);
+
+    margin-top: calc(10 / 768 * 100vw);
+    padding: calc(26 / 768 * 100vw) calc(45 / 768 * 100vw) calc(37 / 768 * 100vw);
+  }
+
+  .registration-card__form-registration {
+    padding-top: calc(16 / 768 * 100vw);
+  }
+
+  .registration-card__label-email {
+    margin-bottom: calc(5 / 768 * 100vw);
+    font-size: calc(16 / 768 * 100vw);
+  }
+
+  .registration-card__input-email {
+    height: calc(49 / 768 * 100vw);
+    padding-left: calc(15 / 768 * 100vw);
+    font-size: calc(28 / 768 * 100vw);
+    margin-bottom: calc(10.752 / 768 * 100vw);
+  }
+
+  .registration-card__email-error {
+    font-size: calc(16 / 768 * 100vw);
+    color: #ee2424;
+  }
+
+  .registration-card__label-name {
+    margin-bottom: calc(5 / 768 * 100vw);
+    font-size: calc(16 / 768 * 100vw);
+  }
+
+  .registration-card__input-name {
+    height: calc(49 / 768 * 100vw);
+    padding-left: calc(15 / 768 * 100vw);
+    font-size: calc(28 / 768 * 100vw);
+    margin-bottom: calc(11 / 768 * 100vw);
+  }
+
+  .registration-card__name-error {
+    font-size: calc(16 / 768 * 100vw);
+    color: #ee2424;
+  }
+
+  .textarea-comment__span {
+    font-size: calc(14 / 768 * 100vw);
+    margin-bottom: calc(5 / 768 * 100vw);
+  }
+
+  .textarea-comment__textarea {
+    height: calc(246 / 768 * 100vw);
+    width: calc(509 / 768 * 100vw);
+    padding-left: calc(15 / 768 * 100vw);
+    padding-top: calc(9 / 768 * 100vw);
+    font-size: calc(28 / 768 * 100vw);
+  }
+
+  .textarea-comment__textarea::placeholder {
+    font-size: calc(28 / 768 * 100vw);
+  }
+
+  .registration-card__checkbox {
+    margin-bottom: calc(56 / 768 * 100vw);
+  }
+
+  .radio__span {
+    font-size: calc(14 / 768 * 100vw);
+  }
+
+  .radio__man {
+    margin-bottom: calc(9 / 768 * 100vw);
+    font-size: calc(14 / 768 * 100vw);
+  }
+
+  .radio__input-man+label::before {
+    width: calc(20 / 768 * 100vw);
+    height: calc(20 / 768 * 100vw);
+    padding: calc(2 / 768 * 100vw);
+    margin-right: calc(9 / 768 * 100vw);
+  }
+
+  .radio__woman {
+    margin-bottom: calc(9 / 768 * 100vw);
+    font-size: calc(14 / 768 * 100vw);
+  }
+
+  .radio__input-woman+label::before {
+    width: calc(20 / 768 * 100vw);
+    height: calc(20 / 768 * 100vw);
+    padding: calc(2 / 768 * 100vw);
+    margin-right: calc(9 / 768 * 100vw);
+  }
+
+  .checkbox__input-checkbox+label::before {
+    width: calc(20 / 768 * 100vw);
+    height: calc(20 / 768 * 100vw);
+    padding: calc(2 / 768 * 100vw);
+    margin-right: calc(10 / 768 * 100vw);
+  }
+
+  .checkbox__label-checkbox {
+    font-size: calc(14 / 768 * 100vw);
+  }
+
+  .registration-card__button {
+    width: calc(180 / 768 * 100vw);
+    height: calc(52 / 768 * 100vw);
+    font-size: calc(24 / 768 * 100vw);
+  }
+}

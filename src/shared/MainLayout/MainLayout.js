@@ -1,5 +1,4 @@
 import React from 'react'
-import { LogoIcon } from 'assets/images'
 
 import './MainLayout.scss'
 import { useNavigate } from 'react-router-dom'
@@ -19,7 +18,6 @@ const MainLayout = (props) => {
                         >
                             Store
                         </a>
-                        <LogoIcon />
                     </div>
 
                     <nav className='header_menu'>
@@ -31,7 +29,7 @@ const MainLayout = (props) => {
                                         navigate('/')
                                     }}
                                 >
-                                    Home
+                                    Главная
                                 </a>
                             </li>
                             <li className='menu_item'>
@@ -41,7 +39,7 @@ const MainLayout = (props) => {
                                         navigate('/support')
                                     }}
                                 >
-                                    Feedback
+                                    Обратная связь
                                 </a>
                             </li>
                             <li className='menu_item'>
@@ -51,7 +49,7 @@ const MainLayout = (props) => {
                                         navigate('/cart')
                                     }}
                                 >
-                                    Cart
+                                    Корзина
                                 </a>
                             </li>
                         </ul>
@@ -59,6 +57,16 @@ const MainLayout = (props) => {
                 </div>
             </header>
             <div className='content'>{props.children}</div>
+            <footer className='footer'>
+                <div className='footer__container _container'>
+                    <div className='footer__copy'>©2022</div>
+                    <div className='footer__social social'>
+                        <a href='https://github.com/igor-veselkov' className='social__item'>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </div>
     )
 }
