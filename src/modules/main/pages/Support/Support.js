@@ -54,6 +54,18 @@ const Support = () => {
         }
     }
 
+    const genderId = (event) => {
+        setGender(event.target.id)
+    }
+
+    const commentValue = (event) => {
+        setComment(event.target.value)
+    }
+
+    const agreementId = (event) => {
+        setAgreement(event.target.id)
+    }
+
     useEffect(() => {
         if (emailError || nameError) {
             setFormValid(false)
@@ -104,7 +116,7 @@ const Support = () => {
                                 name='gender'
                                 id='man'
                                 value={gender}
-                                onChange={(event) => setGender(event.target.id)}
+                                onChange={(event) => genderId(event)}
                             />
                             <label className='radio__label-man' htmlFor='man'>
                                 Мужчина
@@ -117,7 +129,7 @@ const Support = () => {
                                 name='gender'
                                 id='woman'
                                 value={gender}
-                                onChange={(event) => setGender(event.target.id)}
+                                onChange={(event) => genderId(event)}
                             />
                             <label className='radio__label-woman' htmlFor='woman'>
                                 Женщина
@@ -127,14 +139,12 @@ const Support = () => {
                     <div className='registration-card__textarea-comment'>
                         <textarea
                             className='textarea-comment__textarea'
+                            type='text'
                             name='comment'
                             id='comment'
-                            contentEditable='false'
                             placeholder='Напишите нам...'
                             value={comment}
-                            onChange={(event) => {
-                                setComment(event.target.value)
-                            }}
+                            onChange={(event) => commentValue(event)}
                         ></textarea>
                     </div>
                     <div className='registration-card__checkbox'>
@@ -144,9 +154,7 @@ const Support = () => {
                             id='checkbox'
                             name='checkbox'
                             value={agreement}
-                            onChange={(event) => {
-                                setAgreement(event.target.id)
-                            }}
+                            onChange={(event) => agreementId(event)}
                         />
                         <label className='checkbox__label-checkbox' htmlFor='checkbox'>
                             Я согласен получать обновления на почту
