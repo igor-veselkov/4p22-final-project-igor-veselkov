@@ -5,6 +5,11 @@
   font-family: 'Alegreya Sans SC', sans-serif;
 }
 
+
+.wrapper {
+  height: 100vh;
+}
+
 .registration-card {
   width: calc(700 / 1440 * 100vw);
   box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.25);

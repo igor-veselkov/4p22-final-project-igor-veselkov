@@ -1,15 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { MainLayout } from 'shared'
 import api from '../../config/api'
 import { ProductItem } from './components'
+import { setIsLoading, setProducts } from '../../store/slice'
 
 import s from './Main.module.scss'
 
 const Main = () => {
-    // Фильтрация
-    const [products, setProducts] = useState([])
-    const [isLoading, setIsLoading] = useState(false)
+    // Фильтрация ---> Redux
+    //const [products, setProducts] = useState([])
+    //const [isLoading, setIsLoading] = useState(false)
+    const { products, isLoading } = useSelector((state) => state.mainReducer)
+    const dispatch = useDispatch()
 
     // Фильтрация
     const [searchInput, setSearchInput] = useState('')
@@ -22,20 +26,20 @@ const Main = () => {
 
     // Итоговые продукты
     const [totalProducts, setTotalProducts] = useState([])
-    const [isDirty, setIsDirty] = useState(false)
 
     const searchButtonRef = useRef(null)
 
     // Первоначальная загрузка продуктов
     useEffect(() => {
-        setIsLoading(true)
+        dispatch(setIsLoading(true))
         api.fetchProducts().then((data) => {
-            setProducts(data)
-            setIsLoading(false)
+            dispatch(setProducts(data))
             setFoundProducts(data)
             setTotalProducts(data)
 
             setCategories(['', ...Array.from(new Set(data.map((item) => item.category)))])
+
+            dispatch(setIsLoading(false))
         })
     }, [])
 
@@ -78,9 +82,6 @@ const Main = () => {
                         value={searchInput}
                         onChange={(event) => {
                             setSearchInput(event.target.value)
-                            if (!isDirty) {
-                                setIsDirty(true)
-                            }
                         }}
                         onKeyDown={(event) => {
                             if (event.key === 'Enter') {
@@ -96,9 +97,6 @@ const Main = () => {
                         value={selectedCategory}
                         onChange={(event) => {
                             setSelectedCategory(event.target.value)
-                            if (!isDirty) {
-                                setIsDirty(true)
-                            }
                         }}
                     >
                         {categories.map((category) => (
@@ -110,7 +108,6 @@ const Main = () => {
 
                     <button
                         onClick={() => {
-                            setIsDirty(false)
                             setSearchInput('')
                             setSelectedCategory(' ')
                             setFoundProducts(products)
@@ -120,27 +117,15 @@ const Main = () => {
                     </button>
                 </div>
                 {!isLoading ? (
-                    isDirty ? (
-                        totalProducts.map((product) => (
-                            <ProductItem
-                                key={product.id}
-                                id={product.id}
-                                image={product.image}
-                                title={product.title}
-                                price={product.price}
-                            />
-                        ))
-                    ) : (
-                        products.map((product) => (
-                            <ProductItem
-                                key={product.id}
-                                id={product.id}
-                                image={product.image}
-                                title={product.title}
-                                price={product.price}
-                            />
-                        ))
-                    )
+                    totalProducts.map((product) => (
+                        <ProductItem
+                            key={product.id}
+                            id={product.id}
+                            image={product.image}
+                            title={product.title}
+                            price={product.price}
+                        />
+                    ))
                 ) : (
                     <h1>Loading...</h1>
                 )}

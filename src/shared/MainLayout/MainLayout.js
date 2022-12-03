@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 const MainLayout = (props) => {
     const navigate = useNavigate()
     return (
-        <div>
+        <div className='wrapper'>
             <header>
                 <div className='header_container'>
                     <div className='header_logo_container'>
@@ -58,7 +58,7 @@ const MainLayout = (props) => {
             </header>
             <div className='content'>{props.children}</div>
             <footer className='footer'>
-                <div className='footer__container _container'>
+                <div className='footer__container'>
                     <div className='footer__copy'>©2022</div>
                     <div className='footer__social social'>
                         <a href='https://github.com/igor-veselkov' className='social__item'>
