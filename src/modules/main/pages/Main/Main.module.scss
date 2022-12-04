@@ -2,9 +2,129 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  button {
+    width: calc(100 / 1440 * 100vw);
+    height: calc(30 / 1440 * 100vw);
+    background-color: #1a226b;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    font-size: calc(18 / 1440 * 100vw);
+    font-weight: 700;
+    line-height: calc(16 / 1440 * 100vw);
+    color: #ffffff;
+    transition: 0.3s;
+    position: relative;
+    right: 0;
+    border-radius: calc(16 / 1440 * 100vw);
+  }
+
+  button:hover {
+    background-color: #6670ca;
+    color: #ffffff;
+  }
 }
 
 .search {
   width: 100%;
   margin-bottom: calc(10 / 1440 * 100vw);
+}
+
+input {
+  height: calc(30 / 1440 * 100vw);
+  outline: none;
+  border: 1px solid #000000;
+  padding-left: calc(15 / 1440 * 100vw);
+  font-size: calc(18 / 1440 * 100vw);
+  font-weight: 700;
+  margin-bottom: calc(10 / 1440 * 100vw);
+  border-radius: calc(16 / 1440 * 100vw);
+}
+
+.filter {
+  width: calc(180 / 1440 * 100vw);
+  height: calc(30 / 1440 * 100vw);
+  outline: none;
+  border: 1px solid #000000;
+  padding-left: calc(15 / 1440 * 100vw);
+  font-size: calc(18 / 1440 * 100vw);
+  font-weight: 700;
+  margin-bottom: calc(10 / 1440 * 100vw);
+  border-radius: calc(16 / 1440 * 100vw);
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    button {
+      width: calc(100 / 768 * 100vw);
+      height: calc(30 / 768 * 100vw);
+      font-size: calc(18 / 768 * 100vw);
+      font-weight: 700;
+      line-height: calc(16 / 768 * 100vw);
+      border-radius: calc(16 / 768 * 100vw);
+    }
+
+    .search {
+      margin-bottom: calc(10 / 768 * 100vw);
+    }
+
+    input {
+      height: calc(30 / 768 * 100vw);
+      padding-left: calc(15 / 768 * 100vw);
+      font-size: calc(18 / 768 * 100vw);
+      margin-bottom: calc(10 / 768 * 100vw);
+      border-radius: calc(16 / 768 * 100vw);
+    }
+
+    .filter {
+      width: calc(180 / 768 * 100vw);
+      height: calc(30 / 768 * 100vw);
+      padding-left: calc(15 / 768 * 100vw);
+      font-size: calc(18 / 768 * 100vw);
+      margin-bottom: calc(10 / 768 * 100vw);
+      border-radius: calc(16 / 768 * 100vw);
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    button {
+      width: calc(100 / 430 * 100vw);
+      height: calc(30 / 430 * 100vw);
+      font-size: calc(18 / 430 * 100vw);
+      line-height: calc(16 / 430 * 100vw);
+      border-radius: calc(16 / 430 * 100vw);
+    }
+
+    .search {
+      margin-bottom: calc(10 / 430 * 100vw);
+    }
+
+    input {
+      height: calc(30 / 430 * 100vw);
+      padding-left: calc(15 / 430 * 100vw);
+      font-size: calc(18 / 430 * 100vw);
+      margin-bottom: calc(10 / 430 * 100vw);
+      border-radius: calc(16 / 430 * 100vw);
+    }
+
+    .filter {
+      width: calc(180 / 430 * 100vw);
+      height: calc(30 / 430 * 100vw);
+      padding-left: calc(15 / 430 * 100vw);
+      font-size: calc(18 / 430 * 100vw);
+      margin-bottom: calc(10 / 430 * 100vw);
+      border-radius: calc(16 / 430 * 100vw);
+    }
+  }
 }

@@ -93,6 +93,7 @@ const Main = () => {
                         Поиск
                     </button>
                     <select
+                        className={s.filter}
                         name='select'
                         value={selectedCategory}
                         onChange={(event) => {

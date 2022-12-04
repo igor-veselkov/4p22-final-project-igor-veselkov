@@ -254,6 +254,9 @@
 
 
 @media screen and (max-width: 768px) {
+  .wrapper {
+    height: 100vh;
+  }
 
   .registration-card {
     width: calc(600 / 768 * 100vw);
@@ -275,7 +278,7 @@
     height: calc(49 / 768 * 100vw);
     padding-left: calc(15 / 768 * 100vw);
     font-size: calc(28 / 768 * 100vw);
-    margin-bottom: calc(10.752 / 768 * 100vw);
+    margin-bottom: calc(10 / 768 * 100vw);
   }
 
   .registration-card__email-error {
