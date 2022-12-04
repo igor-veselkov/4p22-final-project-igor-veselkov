@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/4p22-final-project-igor-veselkov/static/css/main.b246a67a.css",
-    "main.js": "/4p22-final-project-igor-veselkov/static/js/main.6e262204.js",
+    "main.css": "/4p22-final-project-igor-veselkov/static/css/main.92780a14.css",
+    "main.js": "/4p22-final-project-igor-veselkov/static/js/main.ad99f4d0.js",
     "index.html": "/4p22-final-project-igor-veselkov/index.html",
-    "main.b246a67a.css.map": "/4p22-final-project-igor-veselkov/static/css/main.b246a67a.css.map",
-    "main.6e262204.js.map": "/4p22-final-project-igor-veselkov/static/js/main.6e262204.js.map"
+    "main.92780a14.css.map": "/4p22-final-project-igor-veselkov/static/css/main.92780a14.css.map",
+    "main.ad99f4d0.js.map": "/4p22-final-project-igor-veselkov/static/js/main.ad99f4d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.b246a67a.css",
-    "static/js/main.6e262204.js"
+    "static/css/main.92780a14.css",
+    "static/js/main.ad99f4d0.js"
   ]
 }
